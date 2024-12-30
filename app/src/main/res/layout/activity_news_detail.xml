@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black_shade"
+    android:layout_height="match_parent"
+    tools:context=".NewsDetailActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light"
+        android:textAlignment="center"
+        app:titleTextColor="@color/blue"
+        app:title="Audio News Application"
+        android:id="@+id/toolbar"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@id/idBtns"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/idIVNews"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="3dp"
+                android:padding="3dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:id="@+id/idTVTitle"
+                android:layout_below="@id/idIVNews"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:padding="4dp"
+                android:layout_margin="4dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sub description"
+                android:layout_below="@id/idTVTitle"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:id="@+id/idTVSubDesc"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idTVSubDesc"
+                android:id="@+id/idTVContent"
+                android:text="Content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/idBtns"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Read full News"
+            android:background="@color/blue"
+            app:backgroundTint="@color/light"
+            android:textColor="@color/blue"
+            android:textAllCaps="false"
+            android:id="@+id/idBtnReadNews"
+            />
+        <Button
+            android:layout_margin="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Speak Out"
+            android:background="@color/blue"
+            app:backgroundTint="@color/light"
+            android:textColor="@color/blue"
+            android:textAllCaps="false"
+            android:id="@+id/idBtnRead"
+            android:layout_below="@id/idBtnReadNews"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
